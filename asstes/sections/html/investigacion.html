@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Laura Galeotti - Investigación</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400&family=Cormorant+Garamond:wght@300;400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../styles/workshops.css">
+    <link rel="stylesheet" href="../styles/curved-slider.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html">Inicio</a></li>
+            <li><a href="#">Bio</a></li>
+            <li><a href="/asstes/sections/html/workshops.html">Workshops</a></li>
+            <li><a href="/asstes/sections/html/contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <div class="container">
+            <div class="title-container">
+                <h1 class="workshops-title">Investigación</h1>
+            </div>
+            
+            <!-- Galería Deslizante con Curvatura -->
+            <div id="demo-container" class="demo-container"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="../../../index.html">Inicio</a></li>
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="/asstes/sections/html/workshops.html">Workshops</a></li>
+                    <li><a href="/asstes/sections/html/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/lauragaleotti_ceramica/" class="btn">Instagram</a>
+                    <a href="https://www.youtube.com/@tallerhuellasenelbarro/featured" class="btn">Youtube</a>
+                </div>
+                <div class="email">marialauragaleotti@gmail.com</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="../../script.js"></script>
+    <script src="../scripts/curved-slider.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Datos para la galería deslizante con imágenes locales
+            const investigacionItems = [
+                {
+                    image: "../../images/workshop-images/investigacion/1.png",
+                    text: "Técnicas Ancestrales",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/2.png",
+                    text: "Materiales Naturales",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/3.png",
+                    text: "Procesos Sostenibles",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/4.png",
+                    text: "Innovación Cerámica",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/5.png",
+                    text: "Arqueología Experimental",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/6.png",
+                    text: "Conservación Cultural",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/7.png",
+                    text: "Investigación Histórica",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/8.png",
+                    text: "Análisis de Materiales",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/9.png",
+                    text: "Técnicas de Cocción",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/10.png",
+                    text: "Métodos Tradicionales",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/11.png",
+                    text: "Experimentación Artística",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/12.png",
+                    text: "Documentación Cerámica",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/13.png",
+                    text: "Estudios Comparativos",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/14.png",
+                    text: "Análisis Científico",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/15.png",
+                    text: "Restauración Cerámica",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/16.png",
+                    text: "Investigación Aplicada",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/17.png",
+                    text: "Metodologías Avanzadas",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/18.png",
+                    text: "Proyectos Colaborativos",
+                },
+                {
+                    image: "../../images/workshop-images/investigacion/19.png",
+                    text: "Investigación de Campo",
+                }
+            ];
+            
+            // Inicializar la galería deslizante
+            initCurvedSlider("demo-container", investigacionItems);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Laura Galeotti - Pastas Cerámicas</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400&family=Cormorant+Garamond:wght@300;400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../styles/workshops.css">
+    <link rel="stylesheet" href="../styles/curved-slider.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html">Inicio</a></li>
+            <li><a href="#">Bio</a></li>
+            <li><a href="/asstes/sections/html/workshops.html">Workshops</a></li>
+            <li><a href="/asstes/sections/html/contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <div class="container">
+            <div class="title-container">
+                <h1 class="workshops-title">Pastas Cerámicas</h1>
+            </div>
+            
+            <!-- Galería Deslizante con Curvatura -->
+            <div id="demo-container" class="demo-container"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="../../../index.html">Inicio</a></li>
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="/asstes/sections/html/workshops.html">Workshops</a></li>
+                    <li><a href="/asstes/sections/html/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/lauragaleotti_ceramica/" class="btn">Instagram</a>
+                    <a href="https://www.youtube.com/@tallerhuellasenelbarro/featured" class="btn">Youtube</a>
+                </div>
+                <div class="email">marialauragaleotti@gmail.com</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="../../script.js"></script>
+    <script src="../scripts/curved-slider.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Datos para la galería deslizante con imágenes locales
+            const pastasItems = [
+                {
+                    image: "../../images/workshop-images/pastas/1.png",
+                    text: "Pasta de Gres",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/2.png",
+                    text: "Pasta de Porcelana",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/3.png",
+                    text: "Pasta de Bola",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/4.png",
+                    text: "Pasta de Arcilla",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/5.png",
+                    text: "Pasta de Caolín",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/6.png",
+                    text: "Pasta de Refractario",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/7.png",
+                    text: "Pasta Tradicional",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/8.png",
+                    text: "Pasta Experimental",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/9.png",
+                    text: "Pasta Artesanal",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/10.png",
+                    text: "Pasta Especial",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/11.png",
+                    text: "Pasta Profesional",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/12.png",
+                    text: "Pasta Compacta",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/13.png",
+                    text: "Pasta Fina",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/14.png",
+                    text: "Pasta Rústica",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/15.png",
+                    text: "Pasta Decorativa",
+                },
+                {
+                    image: "../../images/workshop-images/pastas/16.png",
+                    text: "Pasta Avanzada",
+                }
+            ];
+            
+            // Inicializar la galería deslizante
+            initCurvedSlider("demo-container", pastasItems);
+        });
+    </script>
+</body>
+</html>
