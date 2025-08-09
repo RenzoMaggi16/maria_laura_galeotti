@@ -1,5 +1,5 @@
 /**
- * Curved Slider - Galería dinámica con deslizamiento horizontal y efecto de curvatura
+ * Curved Slider - Galería dinámica con deslizamiento horizontal
  * Optimizado para 60fps con requestAnimationFrame
  */
 class CurvedSlider {
@@ -86,30 +86,30 @@ class CurvedSlider {
             img.addEventListener('dragstart', e => e.preventDefault());
         });
         
-        // Aplicar efecto 3D en hover para desktop
-        if (window.matchMedia('(min-width: 768px)').matches) {
-            this.track.querySelectorAll('.curved-slider-item').forEach(item => {
-                item.addEventListener('mousemove', e => {
-                    if (!this.isDragging) {
-                        const rect = item.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
-                        
-                        const centerX = rect.width / 2;
-                        const centerY = rect.height / 2;
-                        
-                        const angleX = (y - centerY) / 20;
-                        const angleY = (centerX - x) / 20;
-                        
-                        item.style.transform = `perspective(1000px) rotateX(${5 + angleX}deg) rotateY(${angleY}deg)`;
-                    }
-                });
-                
-                item.addEventListener('mouseleave', () => {
-                    item.style.transform = 'perspective(1000px) rotateX(5deg) rotateY(0deg)';
-                });
-            });
-        }
+        // Eliminamos todo el bloque de código que aplica el efecto 3D en hover
+        // if (window.matchMedia('(min-width: 768px)').matches) {
+        //     this.track.querySelectorAll('.curved-slider-item').forEach(item => {
+        //         item.addEventListener('mousemove', e => {
+        //             if (!this.isDragging) {
+        //                 const rect = item.getBoundingClientRect();
+        //                 const x = e.clientX - rect.left;
+        //                 const y = e.clientY - rect.top;
+        //                 
+        //                 const centerX = rect.width / 2;
+        //                 const centerY = rect.height / 2;
+        //                 
+        //                 const angleX = (y - centerY) / 20;
+        //                 const angleY = (centerX - x) / 20;
+        //                 
+        //                 item.style.transform = `perspective(1000px) rotateX(${5 + angleX}deg) rotateY(${angleY}deg)`;
+        //             }
+        //         });
+        //         
+        //         item.addEventListener('mouseleave', () => {
+        //             item.style.transform = 'perspective(1000px) rotateX(5deg) rotateY(0deg)';
+        //         });
+        //     });
+        // }
     }
     
     touchStart(event) {

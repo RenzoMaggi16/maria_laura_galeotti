@@ -65,203 +65,55 @@ main {
     margin: 0;
 }
 
-/* Nuevos estilos para la timeline animada */
-#timeline {
-    position: relative;
-    padding-bottom: 60px;
-}
-
-.timeline-header {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    text-align: center;
-}
-
-.timeline-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    color: #2C1D11;
-    margin: 0;
-}
-
-.timeline-wrapper {
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.timeline-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    transform: translateX(-50%);
-}
-
-.timeline-entry {
+/* Nuevo diseño de biografía con imagen */
+.bio-container {
     display: flex;
-    padding-top: 100px;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
-.timeline-year {
+.bio-content {
+    flex: 3;
+}
+
+.bio-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     position: sticky;
     top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    z-index: 10;
-    align-self: flex-start;
 }
 
-.timeline-dot {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #F9F5F1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    border: 2px solid #1D140B;
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-dot-inner {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #2C1D11;
+.bio-entry {
+    margin-bottom: 30px;
 }
 
-.timeline-title {
+.bio-year {
     font-family: 'Cormorant Garamond', serif;
     font-size: 28px;
     font-weight: 500;
     color: #0F0A06;
-    margin: 0;
-    text-align: center;
-}
-
-.timeline-content {
-    flex: 1;
-    padding-left: 40px;
-    padding-right: 20px;
+    margin-bottom: 10px;
 }
 
 .bio-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
     line-height: 1.6;
-    background-color: #C5956D;
+    background-color: #E7D7C5;
     color: #0F0A06;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-}
-
-.bio-text:hover {
-    transform: scale(1.02);
-}
-
-.bio-decoration {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-/* Elementos decorativos */
-.leaf-decoration {
-    width: 60px;
-    height: 30px;
-    background-image: url('/asstes/images/leaf.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Estilos para las animaciones de fade-in y tipeo */
-.fade-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Estilo para el cursor de tipeo */
-.bio-text {
-  position: relative;
-}
-
-/* Ajuste para el contenedor de texto biográfico */
-.bio-text-container {
-  overflow: hidden;
-}
-
-/* Animación para el efecto de tipeo */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-/* Ajustes adicionales para mejorar la experiencia de scroll */
-.timeline-entry {
-  transition: all 0.5s ease;
-  margin-bottom: 20px;
-}
-
-.rotate-45 {
-    transform: rotate(45deg);
-}
-
-.rotate-90 {
-    transform: rotate(90deg);
-}
-
-.flower-decoration {
-    width: 60px;
-    height: 60px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.flower-decoration.purple {
-    background-image: url('/asstes/images/flower-purple.svg');
-}
-
-.flower-decoration.red {
-    background-image: url('/asstes/images/flower-red.svg');
-}
-
-.flower-decoration.peach {
-    background-image: url('/asstes/images/flower-peach.svg');
-}
-
-.leaf-group-decoration {
-    width: 120px;
-    height: 80px;
-    background-image: url('/asstes/images/leaf-group.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.pattern-decoration {
-    width: 80px;
-    height: 80px;
-    background-image: url('/asstes/images/pattern.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-bottom: 20px;
 }
 
 /* Footer */
@@ -346,34 +198,18 @@ footer a:hover {
         font-size: 60px;
     }
     
-    .fade-hidden {
-        transform: translateY(20px);
+    .bio-container {
+        flex-direction: column-reverse;
     }
     
-    .timeline-wrapper::before {
-        left: 20px;
-    }
-    
-    .timeline-entry {
-        flex-direction: column;
-    }
-    
-    .timeline-year {
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 20px;
+    .bio-image {
         position: relative;
         top: 0;
+        margin-bottom: 30px;
     }
     
-    .timeline-dot {
-        margin-right: 15px;
-        margin-bottom: 0;
-    }
-    
-    .timeline-content {
-        padding-left: 0;
+    .profile-image {
+        max-width: 80%;
     }
 }
 
@@ -382,7 +218,7 @@ footer a:hover {
         font-size: 40px;
     }
     
-    .timeline-title {
+    .bio-year {
         font-size: 22px;
     }
     
@@ -402,3 +238,121 @@ footer a:hover {
         gap: 10px;
     }
 }
+
+/* Diseño alternado con imagen central */
+.bio-layout {
+    position: relative;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.bio-image-container {
+    position: sticky;
+    top: 100px;
+    width: 300px;
+    margin: 0 auto;
+    z-index: 1;
+    text-align: center;
+}
+
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bio-blocks {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bio-entry {
+    width: 45%;
+    margin-bottom: 30px;
+    position: relative;
+    clear: both;
+}
+
+.bio-entry.left {
+    float: left;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.bio-entry.right {
+    float: right;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.bio-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #0F0A06;
+    margin-bottom: 10px;
+}
+
+.bio-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    background-color: #E7D7C5;
+    color: #0F0A06;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive para el diseño alternado */
+@media (max-width: 768px) {
+    .bio-entry {
+        width: 100%;
+        float: none;
+        text-align: left;
+        padding: 0;
+    }
+    
+    .bio-entry.left, .bio-entry.right {
+        float: none;
+        text-align: left;
+        padding: 0;
+    }
+    
+    .bio-image-container {
+        position: relative;
+        top: 0;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .bio-title {
+        font-size: 40px;
+    }
+    
+    .bio-year {
+        font-size: 22px;
+    }
+    
+    .bio-text {
+        font-size: 16px;
+        padding: 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+

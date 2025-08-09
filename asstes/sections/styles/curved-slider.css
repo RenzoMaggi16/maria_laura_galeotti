@@ -11,8 +11,9 @@
     display: flex;
     transition: transform 0.3s ease-out;
     will-change: transform;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    /* Eliminamos estas propiedades que generan el efecto 3D */
+    /* transform-style: preserve-3d; */
+    /* perspective: 1000px; */
 }
 
 .curved-slider-item {
@@ -21,13 +22,15 @@
     height: 300px;
     margin: 0 20px;
     position: relative;
-    transform-style: preserve-3d;
+    /* Eliminamos estas propiedades que generan el efecto 3D */
+    /* transform-style: preserve-3d; */
     transition: transform 0.3s ease;
     cursor: grab;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transform: perspective(1000px) rotateX(5deg);
+    /* Eliminamos la rotación por defecto */
+    /* transform: perspective(1000px) rotateX(5deg); */
 }
 
 .curved-slider-item img {
