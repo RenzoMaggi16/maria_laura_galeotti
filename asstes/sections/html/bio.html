@@ -11,6 +11,8 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../styles/bio.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -24,15 +26,21 @@
 
     <main id="main-content">
         <div class="container">
-            <div class="title-container">
+            <div class="title-container fade-in">
                 <h1 class="bio-title">Bio</h1>
             </div>
-            <!-- Diseño alternado con imagen central -->
-            <div class="bio-layout">
-                <div class="bio-image-container">
-                    
+            
+            <div class="bio-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="bio-intro fade-in">
+                    <div class="bio-image-wrapper">
+                        <img src="../../images/BIO1.png" class="profile-image" alt="Maria Laura Galeotti">
+                    </div>
+                    <p class="bio-quote">"El arte de la cerámica es un diálogo entre la tierra, el fuego y las manos del artista"</p>
                 </div>
-                <div id="bio-blocks" class="bio-blocks"></div>
+                
+                <div id="bio-entries" class="bio-entries"></div>
             </div>
         </div>
     </main>
@@ -49,8 +57,8 @@
             </div>
             <div class="footer-contact">
                 <div class="social-buttons">
-                    <a href="https://www.instagram.com/lauragaleotti_ceramica/" class="btn">Instagram</a>
-                    <a href="https://www.youtube.com/@tallerhuellasenelbarro/featured" class="btn">Youtube</a>
+                    <a href="https://www.instagram.com/lauragaleotti_ceramica/" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.youtube.com/@tallerhuellasenelbarro/featured" class="btn"><i class="fab fa-youtube"></i> Youtube</a>
                 </div>
                 <div class="email">marialauragaleotti@gmail.com</div>
             </div>

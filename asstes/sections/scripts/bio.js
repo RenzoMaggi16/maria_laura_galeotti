@@ -50,23 +50,21 @@ const bioData = [
   }
 ];
 
-function renderBioBlocks() {
-  const bioBlocks = document.getElementById('bio-blocks');
-  if (!bioBlocks) return;
+function renderBioEntries() {
+  const bioEntries = document.getElementById('bio-entries');
+  if (!bioEntries) return;
 
   // Limpiar el contenedor
-  bioBlocks.innerHTML = '';
+  bioEntries.innerHTML = '';
 
+  // Renderizar todas las entradas biográficas
   bioData.forEach((item, index) => {
     const entry = document.createElement('div');
     entry.className = 'bio-entry';
+    entry.setAttribute('data-year', item.year);
     
-    // Alternar entre izquierda y derecha
-    if (index % 2 === 0) {
-      entry.classList.add('left');
-    } else {
-      entry.classList.add('right');
-    }
+    const content = document.createElement('div');
+    content.className = 'bio-content';
     
     const yearElement = document.createElement('h3');
     yearElement.className = 'bio-year';
@@ -76,12 +74,33 @@ function renderBioBlocks() {
     textElement.className = 'bio-text';
     textElement.textContent = item.text;
     
-    entry.appendChild(yearElement);
-    entry.appendChild(textElement);
-    bioBlocks.appendChild(entry);
+    content.appendChild(yearElement);
+    content.appendChild(textElement);
+    entry.appendChild(content);
+    bioEntries.appendChild(entry);
+  });
+
+  // Iniciar las animaciones al hacer scroll
+  checkVisibility();
+}
+
+// Función para verificar la visibilidad de los elementos y aplicar animaciones
+function checkVisibility() {
+  const bioEntries = document.querySelectorAll('.bio-entry');
+  const windowHeight = window.innerHeight;
+  
+  bioEntries.forEach(entry => {
+    const entryTop = entry.getBoundingClientRect().top;
+    
+    if (entryTop < windowHeight * 0.85) {
+      entry.classList.add('visible');
+    }
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderBioBlocks();
+  renderBioEntries();
+  
+  // Añadir evento de scroll para las animaciones
+  window.addEventListener('scroll', checkVisibility);
 });
